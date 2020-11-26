@@ -13,8 +13,8 @@ struct EmojiArtModel {
         
         let id: Int
         let text: String
-        var x: Int
-        var y: Int
+        var x: Int // Offset from the center
+        var y: Int // Offset from the center
         var size: Int
         
         fileprivate init(id: Int, text: String, x: Int, y: Int, size: Int) {
@@ -26,7 +26,7 @@ struct EmojiArtModel {
         }
     }
     
-    var background: URL?
+    var backgroundURL: URL?
     var emojis = [Emoji]()
     
     private var uniqueEmojiId = 0
